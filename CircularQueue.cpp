@@ -12,6 +12,7 @@ public:
         FRONT = -1;
         REAR = -1;
     }
+
     void insert() {
         int num;
         cout << "Enter a number: ";
@@ -22,6 +23,7 @@ public:
             cout << "\nQueue overflow\n";
             return;
         }
+
         // cek apakah antrian kosong
         if (FRONT == -1) {
             FRONT = 0;
@@ -44,6 +46,7 @@ public:
             return;
         }
         cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << endl;
+
         // cek jika antrian hanya memiliki satu elemen
         if (FRONT == REAR) {
             FRONT = -1;
@@ -68,6 +71,7 @@ public:
             return;
         }
         cout << "\nElements in the queue are....\n";
+
         // jika FRONT <= REAR, iterasi dari FRONT hingga REAR
         if (FRONT_Position <= REAR_Position) {
             while (FRONT_Position <= REAR_Position) {
@@ -109,13 +113,10 @@ int main() {
             cout << "Enter your choice (1-4): ";
             cin >> ch;
             cout << endl;
+
             switch (ch) {
                 case '1': {
                     q.insert();
-                    break;
-                }
-                case '2': {
-                    q.remove();
                     break;
                 }
             }
